@@ -5,5 +5,5 @@ export const Login: React.FC = () => {
     <div>
       <p>Login Page</p>
     </div>
-  )
+  );
 };

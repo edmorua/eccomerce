@@ -2,20 +2,26 @@ import React from 'react';
 import { Box, Typography } from '@mui/material';
 
 const MainSection = () => {
-	return (
-		<Box>
-			<Typography>Main Section</Typography>
-		</Box>
-	);
+  return (
+    <Box sx={{ width: '50%', minHeight: '500px', backgroundColor: '#B9E0FF' }}>
+      <Typography>Main Section</Typography>
+    </Box>
+  );
 };
 
 const SecondarySection = () => {
   return (
-    <Box>
+    <Box
+      sx={{
+        width: '50%',
+        minHeight: '500px',
+        backgroundColor: 'rgb(141, 158, 255)',
+      }}
+    >
       <Typography> Secondary Section</Typography>
     </Box>
-  )
-}
+  );
+};
 
 export type SectionProps = {
   sectionId: string;
@@ -23,10 +29,10 @@ export type SectionProps = {
 
 export const Section = (props: SectionProps) => {
   const { sectionId } = props;
-	return (
-		<Box id={sectionId}>
-			<MainSection />
-			<SecondarySection />
-		</Box>
-	);
+  return (
+    <Box id={sectionId} sx={{ display: 'flex', flexDirection: 'row' }}>
+      <MainSection />
+      <SecondarySection />
+    </Box>
+  );
 };
